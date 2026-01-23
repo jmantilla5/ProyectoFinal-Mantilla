@@ -1,0 +1,13 @@
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  background-color: black;
+}
+.anchor-nav {
+  color: whitesmoke;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+}
