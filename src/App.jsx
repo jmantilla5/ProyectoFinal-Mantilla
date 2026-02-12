@@ -6,6 +6,9 @@ import ItemListContainer from "./components/ItemListContainer.jsx";
 // import BotonMultiuso from "./examples/BotonMultiuso.jsx";
 import Navbar from "./components/Navbar.jsx";
 import NavBarBS from "./components/NavBarBS.jsx";
+import ItemDetailContainer from "./components/ItemDetailContainer";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Error from "./components/Error.jsx";
 
 function App() {
   //const saludar = () => {
@@ -16,14 +19,24 @@ function App() {
   //};
   console.log("App");
   return (
-    <>
+    <BrowserRouter>
       {/*<Navbar />*/}
       <NavBarBS />
-      <ItemListContainer mensaje="¡Bienvenidos a su próximo destino!" />
-      {/*<ItemCount />*/}
-      {/*<BotonMultiuso texto="Hola" color="red" onClickFunction={saludar} />
-      <BotonMultiuso texto="Chao" color="green" onClickFunction={despedir} />*/}
-    </>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <ItemListContainer mensaje="¡Bienvenidos a su próximo destino!" />
+          }
+        />
+        <Route
+          path="/category/:type"
+          element={<ItemListContainer mensaje="Estas en la categoría " />}
+        />
+        <Route path="/item/:id" element={<ItemDetailContainer />} />
+        <Route path="*" element={<Error />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
