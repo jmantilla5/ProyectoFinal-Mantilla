@@ -1,4 +1,4 @@
-# Coder Fkex App 🛒
+# Coder Flex App 🛒
 
 Este proyecto fue realizado para enseñar las bases de react con JS en Coderhouse.
 
