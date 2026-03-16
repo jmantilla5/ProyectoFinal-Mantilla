@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const ItemCount = () => {
+const ItemCount = ({ onAdd, stock }) => {
   //const [variableDeEstado, funcionModificadora] = useState(valorInicial);
   //REGLAS: SIEMPRE DENTRO DE COMPONENTES // SE DECLARAN EN EL NIVEL SUPERIOR // NO SE DECLARAN CONDICIONALMENTE // VALORES INICIALES PUEDEN SER STRING, OBJECT, BOOLEAN, ARRAY
   // NO INICIALES CON UNA FUNCION
@@ -8,7 +8,9 @@ const ItemCount = () => {
   const [compra, setCompra] = useState(false);
   console.log("Contador");
   const sumar = () => {
-    setCount(count + 1);
+    if (count < stock) {
+      setCount(count + 1);
+    }
   };
   const restar = () => {
     if (count > 0) {
@@ -17,7 +19,7 @@ const ItemCount = () => {
   };
 
   const comprar = () => {
-    setCompra(!compra);
+    onAdd(count);
   };
 
   //useEffect(() => {}, []);
@@ -43,20 +45,30 @@ const ItemCount = () => {
   }, [compra]);
 
   return (
-    <div>
-      <button onClick={restar} className="btn btn-danger">
-        -
-      </button>
+    <>
+      {stock === 0 ? (
+        <p>Lo sentimos, no hay stock disponible 😶</p>
+      ) : (
+        <div>
+          <button onClick={restar} className="btn btn-danger">
+            -
+          </button>
 
-      <span className="btn">{count}</span>
+          <span className="btn">{count}</span>
 
-      <button onClick={sumar} className="btn btn-success">
-        +
-      </button>
-      <button onClick={comprar} className="btn btn-primary d-block mt-2">
-        Comprar
-      </button>
-    </div>
+          <button onClick={sumar} className="btn btn-success">
+            +
+          </button>
+          <button
+            onClick={comprar}
+            className="btn btn-primary d-block mt-2"
+            disabled={stock === 0 || count === 0}
+          >
+            Comprar
+          </button>
+        </div>
+      )}
+    </>
   );
 };
 

@@ -1,16 +1,16 @@
-const productos = [
-  {
-    id: "01",
-    name: "Ciudad 1",
-    description: "Descripcion de la ciudad 1",
-    stock: 20,
-    price: 25000,
-    category: "nuevos",
-    img: "https://picsum.photos/seed/picsum/200",
-  },
+export const productos = [
+  //  {
+  // id: "01",
+  // name: "Ciudad 1",
+  //description: "Descripcion de la ciudad 1",
+  //stock: 20,
+  //price: 25000,
+  //category: "nuevos",
+  //img: "https://picsum.photos/seed/picsum/200",
+  // },
 
   {
-    id: "02",
+    //id: "02",
     name: "Ciudad 2",
     description: "Descripcion de la ciudad 2",
     stock: 24,
@@ -20,7 +20,7 @@ const productos = [
   },
 
   {
-    id: "03",
+    //id: "03",
     name: "Ciudad 3",
     description: "Descripcion de la ciudad 3",
     stock: 54,
@@ -30,7 +30,7 @@ const productos = [
   },
 
   {
-    id: "04",
+    //id: "04",
     name: "Ciudad 4",
     description: "Descripcion de la ciudad 4",
     stock: 33,

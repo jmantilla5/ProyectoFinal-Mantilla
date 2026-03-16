@@ -8,7 +8,6 @@ import CartWidget from "./CartWidget";
 import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
-  console.log("NavBar");
   return (
     <nav className="nav-container">
       <NavLink className="anchor-nav" to="/">

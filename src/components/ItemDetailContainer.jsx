@@ -1,19 +1,51 @@
 import { useState, useEffect } from "react";
 import { getItem } from "../mock/asyncMock";
 import ItemDetail from "./ItemDetail";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import Loader from "./Loader";
+import { doc, getDoc } from "firebase/firestore";
+import { db } from "../service/firebase";
 
 const ItemDetailContainer = () => {
   const [detalle, setDetalle] = useState({});
+  const [cargando, setCargando] = useState(true);
+  const [notExist, setNotExist] = useState(null);
   const { id } = useParams();
+
+  //FIREBASE
   useEffect(() => {
-    getItem(id)
-      .then((res) => setDetalle(res))
-      .catch((error) => console.log(error));
+    const docRef = doc(db, "viajescondestino", id);
+    getDoc(docRef)
+      .then((res) => {
+        if (res.data()) {
+          //seteo el producto
+          setDetalle({ id: res.id, ...res.data() });
+        } else {
+          setNotExist(true);
+        }
+      })
+      .catch((error) => console.log(error))
+      .finally(() => setCargando(false));
   }, [id]);
+
+  if (notExist) {
+    return (
+      <div>
+        <h2>El producto no existe</h2>
+        <Link className="btn btn-dark" to="/">
+          Volver a Home
+        </Link>
+      </div>
+    );
+  }
+
   return (
     <div>
-      <ItemDetail detalle={detalle} />
+      {cargando ? (
+        <Loader text="Cargando detalle del producto" />
+      ) : (
+        <ItemDetail detalle={detalle} />
+      )}
     </div>
   );
 };

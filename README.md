@@ -1,16 +1,29 @@
-# React + Vite
+# Coder Fkex App 🛒
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto fue realizado para enseñar las bases de react con JS en Coderhouse.
 
-Currently, two official plugins are available:
+![app](/public/miapp.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Instalación 🧑‍🔧
 
-## React Compiler
+1. Clone el repositorio.
+2. Muevase a la carpeta creada con el comando `cd appjm-coder-flex-81795`
+3. Ejecute el comando `npm install` para instalar dependencias y crear la carpeta `node_modules`
+4. Ejecute el comando `npm run dev` para levantar la app en un entorno local.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+> Es necesario contar con un Nod v22.11.0 instalada
 
-## Expanding the ESLint configuration
+### Version Host 💻
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Si desea ver el proyecto online, puede ingresar al siguiente link: [Coder Flex app]()
+
+### Librerias utlizadas 📘
+
+- [React Bootstrap](https://react-bootstrap.netlify.app): Utilizada para el styling de la app.
+- [React Icons](https://react-bootstrap.netlify.app): Libreria de iconos.
+- [React Router Dom](https://reactrouter.com): Utilizada para implementar la navegación por rutas.
+- [Firebase](htpps://firebase.google.com): Configurada para base de datos.
+- [Sweetalert2](https://sweetalert2.github.io/): Configurada para crear mejores alertas y notificaciones en react.
+- [React Hook Form](https://react-hook-form.com/): Utilizada para gestionar formularios de manera eficiente, sencilla y con alto rendimiento.
+
+Desarrollado por Julian Mantilla.

@@ -34,7 +34,12 @@ function NavBarBS() {
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
-          <CartWidgetRI />
+          <NavLink
+            style={{ textDecoration: "none", color: "black" }}
+            to="/cart"
+          >
+            <CartWidgetRI />
+          </NavLink>
         </Navbar.Collapse>
       </Container>
     </Navbar>
