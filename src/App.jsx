@@ -4,7 +4,7 @@ import ItemCount from "./components/ItemCount.jsx";
 import ItemListContainer from "./components/ItemListContainer.jsx";
 // import de componentes
 // import BotonMultiuso from "./examples/BotonMultiuso.jsx";
-import Navbar from "./components/Navbar.jsx";
+import Navbar from "./components/NavBar.jsx";
 import NavBarBS from "./components/NavBarBS.jsx";
 import ItemDetailContainer from "./components/ItemDetailContainer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
