@@ -22,7 +22,7 @@ Si desea ver el proyecto online, puede ingresar al siguiente link: [Coder Flex a
 - [React Bootstrap](https://react-bootstrap.netlify.app): Utilizada para el styling de la app.
 - [React Icons](https://react-bootstrap.netlify.app): Libreria de iconos.
 - [React Router Dom](https://reactrouter.com): Utilizada para implementar la navegación por rutas.
-- [Firebase](htpps://firebase.google.com): Configurada para base de datos.
+- [Firebase](https://firebase.google.com/): Configurada para base de datos.
 - [Sweetalert2](https://sweetalert2.github.io/): Configurada para crear mejores alertas y notificaciones en react.
 - [React Hook Form](https://react-hook-form.com/): Utilizada para gestionar formularios de manera eficiente, sencilla y con alto rendimiento.
 
